@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Consumer {
@@ -13,6 +14,8 @@ public class Consumer {
 	private String userName;
 	private String userPwd;
 	private String userMobileNumber;
+	@OneToMany
+	private Vouchers voucher;
 	public String getUserName() {
 		return userName;
 	}
