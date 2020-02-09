@@ -1,0 +1,8 @@
+package com.project.personal.EVoucherSystem.model;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Consumer {
+
+}

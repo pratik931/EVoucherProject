@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +22,7 @@
 				<h1>Login to continue</h1><br>
 			</div>
 		</div>
-		<form action="login">
+		<form action="login" method="post">
 		<div class="row">
 			<div class="col-lg-12">
 				<input class="form-control" name="username" placeholder="Username" style="width:20%"></input> 
@@ -39,6 +39,7 @@
 				<input class= "btn btn-primary"  type="submit" name="submit" value="Login" style="width:20%"></input> 
 			</div><br><br>
 		</div>
+		<h5 style="color:red">${loginError} </h5>
 		</form>
 		
 		<%--Sign up --%>
@@ -47,22 +48,23 @@
 				<h1>New User? Please Sign-up:</h1><br>
 			</div>
 		</div>
-		<form action="signup">
+		<form action="signup" method="post">
 		<div class="row">
 			<div class="col-lg-12">
-				<input class="form-control" name="userName" placeholder="Username" style="width:20%"></input> 
+				<input class="form-control" name="userName" placeholder="Username" style="width:20%" required></input> 	<h5 style="color:red">${userExists} </h5>
+			</div>
+		</div><br>
+		
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<input class="form-control" type="password" name="userPwd" placeholder="Password" style="width:20%" required></input> 
 			</div>
 		</div><br>
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<input class="form-control" type="password" name="userPwd" placeholder="Password" style="width:20%"></input> 
-			</div>
-		</div><br>
-		
-		<div class="row">
-			<div class="col-lg-12">
-				<input class="form-control" name="userMobileNumber" placeholder="10 digit Mobile Number" pattern="[789][0-9]{9}" style="width:20%"></input> 
+				<input class="form-control" name="userMobileNumber" placeholder="10 digit Mobile Number" pattern="[789][0-9]{9}" style="width:20%" required></input> 
 			</div>
 		</div><br>
 		<div class="row">

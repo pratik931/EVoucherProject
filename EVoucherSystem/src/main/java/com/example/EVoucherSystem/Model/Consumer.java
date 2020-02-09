@@ -14,8 +14,7 @@ public class Consumer {
 	private String userName;
 	private String userPwd;
 	private String userMobileNumber;
-	@OneToMany
-	private Vouchers voucher;
+	
 	public String getUserName() {
 		return userName;
 	}

@@ -22,9 +22,8 @@ public class Vouchers {
 	private Date voucherStartDate;
 	private Date voucherEndDate;
 	private BigDecimal voucherAmount; 
-	private boolean redeemFlag;
-	@ManyToOne
-	private Consumer consumer;
+	private boolean isRedeemed;
+	
 	public int getVoucherID() {
 		return voucherID;
 	}
@@ -57,17 +56,17 @@ public class Vouchers {
 		this.voucherAmount = voucherAmount;
 	}
 	public boolean isRedeemFlag() {
-		return redeemFlag;
+		return isRedeemed;
 	}
 	public void setRedeemFlag(boolean redeemFlag) {
-		this.redeemFlag = redeemFlag;
+		this.isRedeemed = redeemFlag;
 	}
 	
 	@Override
 	public String toString() {
 		return "Vouchers [voucherID=" + voucherID + ", voucherCode=" + voucherCode + ", voucherStartDate="
 				+ voucherStartDate + ", voucherEndDate=" + voucherEndDate + ", voucherAmount=" + voucherAmount
-				+ ", redeemFlag=" + redeemFlag + "]";
+				+ ", redeemFlag=" + isRedeemed + "]";
 	}
 
 }

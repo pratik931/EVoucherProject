@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1" isELIgnored="false"%>
+  <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +32,8 @@
 					<th><c:out value="${voucher.getVoucherID()}" /></th>
 					<td><c:out value="${voucher.getVoucherCode()}" /></td>
 					<td><c:out value="${voucher.getVoucherStartDate()}" /></td>
-					<td><c:out value="${voucher.getVoucherEndDate()}" /></td></td>
-					<td><c:out value="${voucher.isRedeemFlag()}" /></td></td>
+					<td><c:out value="${voucher.getVoucherEndDate()}" /></td>
+					<td><c:out value="${voucher.isRedeemFlag()}" /></td>
 				</tr>
 			</c:forEach>
 			</tbody>
