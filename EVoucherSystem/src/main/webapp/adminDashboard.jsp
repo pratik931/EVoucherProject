@@ -22,27 +22,16 @@
 		<div class="row">
 			<div class="col-lg-6" align="Right">
 				<form action = "generateVouchers">
-					<input class="btn btn-primary"  type="submit" name="submit" value="Generate New Vouchers" style="width:50%" onClick="showVoucherGenerationMessage()">
+					<input class="btn btn-primary"  type="submit" name="generateNewVouchers" value="Generate New Vouchers" style="width:50%">
 				</form>
 			</div>
 			<div class="col-lg-6" align="Left">
-				<form action = "showVouchers">
-					<input class="btn btn-primary"  type="submit" name="submit" value="Show Valid Vouchers" style="width:50%" >
+				<form action = "distributeVouchers">
+					<input class="btn btn-primary"  type="submit" name="distributeVouchers" value="Distribute Vouchers" style="width:50%" >
 				</form>
 			</div>
 		</div>
 		
-		<div class = "Row" id = "voucherGenerationMessage" style="display:none">
-			<div class="col-lg-12" align="center">
-				<h3>${vouchers} generated successfully.</h3>
-			</div>
-		</div>
 		
-	</div>
-	<script type="text/javascript">
-		function showVoucherGenerationMessage(){
-			document.getElementById('voucherGenerationMessage').style.display = "block";
-		}
-	</script>
 </body>
 </html>

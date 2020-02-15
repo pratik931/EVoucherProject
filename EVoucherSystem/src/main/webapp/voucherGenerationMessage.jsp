@@ -33,7 +33,7 @@
 					<td><c:out value="${voucher.getVoucherCode()}" /></td>
 					<td><c:out value="${voucher.getVoucherStartDate()}" /></td>
 					<td><c:out value="${voucher.getVoucherEndDate()}" /></td></td>
-					<td><c:out value="${voucher.isRedeemFlag()}" /></td></td>
+					<td><c:out value="${voucher.getRedeemFlag()}" /></td></td>
 				</tr>
 			</c:forEach>
 			</tbody>
