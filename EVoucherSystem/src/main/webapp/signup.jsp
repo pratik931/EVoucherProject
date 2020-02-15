@@ -16,39 +16,36 @@
 
 	<div class="container" align="center">
 	
-	<%--Login --%>
 		<div class="row">
 			<div class="col-lg-12">
-				<h1>Login to continue</h1><br>
+				<h1>Please fill the form to Sign Up</h1><br>
 			</div>
 		</div>
-		<form action="login" method="post">
+		<form action="signup" method="post">
 		<div class="row">
 			<div class="col-lg-12">
-				<input class="form-control" name="username" placeholder="Username" style="width:20%"></input> 
+				<input class="form-control" name="userName" placeholder="Username" style="width:20%" required></input> 	<h5 style="color:red">${userExists} </h5>
+			</div>
+		</div><br>
+		
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<input class="form-control" type="password" name="userPwd" placeholder="Password" style="width:20%" required></input> 
 			</div>
 		</div><br>
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<input class="form-control" type="password" name="password" placeholder="Password" style="width:20%"></input> 
+				<input class="form-control" name="userMobileNumber" placeholder="10 digit Mobile Number" pattern="[789][0-9]{9}" style="width:20%" required></input> 
 			</div>
 		</div><br>
 		<div class="row">
 			<div class="col-lg-12">
-				<input class= "btn btn-primary"  type="submit" name="submit" value="Login" style="width:20%"></input> 
-			</div><br><br>
+				<input class= "btn btn-primary"  type="submit" name="submit" value="Sign Up" style="width:20%"></input> 
+			</div>
 		</div>
-		<h5 style="color:red">${loginError} </h5>
 		</form>
-		
-		<%--Sign up --%>
-		<div class="row">
-			<div class="col-lg-12">
-				<h3><a href="signup.jsp" style="text-decoration:none">New User? Create an account</a></h3><br>
-			</div>
-		</div>
-		
 		
 		
 	</div>
