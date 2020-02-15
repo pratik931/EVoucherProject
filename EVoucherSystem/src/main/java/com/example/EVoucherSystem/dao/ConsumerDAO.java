@@ -8,6 +8,6 @@ import com.example.EVoucherSystem.Model.Consumer;
 public interface ConsumerDAO extends CrudRepository<Consumer, Integer>{
 	Consumer findByUserName(String userName);
 	
-	@Query(" from Consumer where  user_name=?1 and user_pwd=?2")
+	@Query(" from Consumer where userName=?1 and userPwd=?2")
 	Consumer findConsumer(String userName, String pwd);
 }
