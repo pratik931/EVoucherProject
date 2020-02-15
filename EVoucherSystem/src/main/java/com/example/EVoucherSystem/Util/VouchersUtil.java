@@ -31,7 +31,8 @@ public class VouchersUtil {
 				voucher.setVoucherStartDate(generateVoucherStartDate());
 				voucher.setVoucherEndDate(generateVoucherEndDate());
 				voucher.setVoucherAmount(generateVoucherAmount());
-				voucher.setRedeemFlag(true);
+				voucher.setRedeemFlag(isValidVoucher(voucher));
+				voucher.setAssigned(false);
 				System.out.println(voucher);
 				vouchers.add(voucher);
 			}
@@ -85,6 +86,15 @@ public class VouchersUtil {
         return actualRandomDec; 
 	}
 	
-	
+	public static boolean isValidVoucher(Vouchers voucher) {
+		Date currentDate = Date.valueOf(LocalDate.now());
+		int comparisonResult = voucher.getVoucherEndDate().compareTo(currentDate);
+		
+		if(comparisonResult < 0 || voucher.isAssigned())
+			return false;
+		else
+			return true;
+		
+	}
 	
 }
